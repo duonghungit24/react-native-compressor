@@ -7,6 +7,7 @@ import android.provider.OpenableColumns
 import android.util.Log
 import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReactApplicationContext
+import com.reactnativecompressor.Audio.AudioCompressor
 import com.reactnativecompressor.Video.VideoCompressor.CompressionListener
 import com.reactnativecompressor.Video.VideoCompressor.VideoCompressorClass
 import java.io.FileNotFoundException
@@ -149,6 +150,10 @@ object Utils {
       // Ensure leading schema with a triple slash
       Pattern.compile("^file:/*").matcher(path).replaceAll("file:///")
     }
+  }
+
+  fun addLog(log: String) {
+    Log.d(AudioCompressor.TAG,  log)
   }
 
   val exifAttributes = arrayOf(

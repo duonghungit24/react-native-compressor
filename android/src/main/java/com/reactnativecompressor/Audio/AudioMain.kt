@@ -11,9 +11,7 @@ class AudioMain(private val reactContext: ReactApplicationContext) {
     promise: Promise) {
     try {
 
-      // Skip compression on Android to avoid libandroidlame dependency
-      // Return the original file URL without compression
-      promise.resolve(fileUrl)
+      AudioCompressor.CompressAudio(fileUrl,optionMap,reactContext,promise)
     } catch (ex: Exception) {
       promise.reject(ex)
     }
