@@ -16,6 +16,7 @@ import com.reactnativecompressor.Utils.Utils.addLog
 
 class AudioCompressor {
   companion object {
+    val TAG="AudioMain"
     private const val TIMEOUT_USEC = 10000L
     private const val AAC_MIME_TYPE = "audio/mp4a-latm"
 
